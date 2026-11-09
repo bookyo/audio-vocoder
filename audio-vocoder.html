@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f6f0e4">
+<meta name="color-scheme" content="light">
+<meta name="format-detection" content="telephone=no">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Audio Vocoder — Free Online Robot Voice Effect | Elysia Tools</title>
+<meta name="description" content="Turn your voice into a robot voice with a free online channel vocoder. Upload a dry take, choose a synth carrier and render MP3, WAV, FLAC and more.">
+<meta name="keywords" content="audio vocoder, robot voice, vocoder online, free vocoder, channel vocoder, voice effect, synth carrier, audio effect, Elysia Tools">
+<meta name="author" content="Elysia Tools">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="canonical" href="https://elysiatools.com/en/tools/audio-vocoder">
+<link rel="icon" href="https://elysiatools.com/favicon.ico" sizes="any">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Elysia Tools">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Audio Vocoder — Free Online Robot Voice Effect | Elysia Tools">
+<meta property="og:description" content="Turn your voice into a robot voice with a free online channel vocoder. Upload a dry take, choose a synth carrier and render MP3, WAV, FLAC and more.">
+<meta property="og:url" content="https://elysiatools.com/en/tools/audio-vocoder">
+<meta property="og:image" content="https://elysiatools.com/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Audio Vocoder by Elysia Tools — turn your voice into a robot voice">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Audio Vocoder — Free Online Robot Voice Effect | Elysia Tools">
+<meta name="twitter:description" content="Turn your voice into a robot voice with a free online channel vocoder. Upload a dry take, choose a synth carrier and render MP3, WAV, FLAC and more.">
+<meta name="twitter:image" content="https://elysiatools.com/og-image.jpg">
+<meta name="twitter:image:alt" content="Audio Vocoder by Elysia Tools — turn your voice into a robot voice">
+<style>html,body{margin:0;padding:0;background:#f6f0e4}</style>
+<style>
+.av{--paper:#f6f0e4;--ink:#17140f;--muted:#6b6458;--line:#e4dbca;--orange:#d9552a;--teal:#0f6f6b;--card:#fffdf8;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;padding:clamp(22px,5vw,64px);box-sizing:border-box}
+.av *{box-sizing:border-box}
+.av .wrap{max-width:1080px;margin:0 auto}
+.av a{color:inherit;text-decoration:none}
+.av a:hover{color:var(--orange)}
+.av .top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.av .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.02em}
+.av .mark{width:26px;height:26px;border-radius:50%;background:conic-gradient(from 210deg,#22d3ee,#8b5cf6,#ec4899,#22d3ee);display:grid;place-items:center;flex:none}
+.av .mark i{display:block;width:10px;height:10px;border-radius:50%;background:var(--paper)}
+.av .top a{font-size:13px;color:var(--muted)}
+.av .hero{padding:clamp(38px,7vw,78px) 0 30px;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.av .eyebrow{font-size:11px;font-weight:800;letter-spacing:.17em;text-transform:uppercase;color:var(--orange);margin:0 0 14px}
+.av h1,.av h2,.av h3{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.035em;line-height:1.06;margin:0}
+.av h1{font-size:clamp(40px,6.4vw,72px);max-width:760px}
+.av h1 em{font-style:italic;color:var(--orange)}
+.av h2{font-size:clamp(29px,4vw,44px);max-width:820px}
+.av h3{font-size:23px;letter-spacing:-.02em}
+.av .lede{font-size:clamp(17px,2vw,20px);line-height:1.6;color:#3b372f;max-width:720px;margin:20px 0 0}
+.av .actions{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 16px}
+.av .btn{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--paper);padding:12px 20px;border-radius:999px;font-size:14px;font-weight:700;border:1px solid var(--ink)}
+.av .btn:hover{background:var(--orange);border-color:var(--orange);color:#fff}
+.av .btn.ghost{background:transparent;color:var(--ink)}
+.av .btn.ghost:hover{background:var(--ink);color:var(--paper)}
+.av .micro{font-size:13px;color:var(--muted);margin:0}
+.av .flowcard{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:0 18px 40px rgba(23,20,15,.06)}
+.av .flowrow{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.av .sig{border:1px solid var(--line);border-radius:14px;padding:13px 14px;background:#fffaf0}
+.av .sig span{display:block;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:4px}
+.av .sig b{font-size:14px}
+.av .sig small{display:block;font-size:12px;color:var(--muted);line-height:1.4;margin-top:3px}
+.av .arrow{text-align:center;color:var(--orange);font-size:18px;line-height:1;margin:2px 0 6px}
+.av .vocoder{border-radius:16px;background:#17140f;color:#f6f0e4;padding:15px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.av .vocoder b{font-family:Georgia,serif;font-size:18px;font-weight:400}
+.av .bars{display:flex;align-items:flex-end;gap:3px;height:34px}
+.av .bars i{display:block;width:4px;border-radius:99px;background:linear-gradient(180deg,#22d3ee,#8b5cf6,#ec4899);opacity:.95}
+.av .out{border:1px solid var(--line);border-radius:14px;padding:13px 14px;background:#fffaf0;margin-top:12px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.av .out span{font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--orange)}
+.av .out b{font-size:14px}
+.av .stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:8px}
+.av .stats div{padding:20px 18px 20px 0;border-right:1px solid var(--line)}
+.av .stats div:nth-child(3n){border-right:0}
+.av .stats b{display:block;font-family:Georgia,serif;font-size:clamp(28px,3.8vw,40px);font-weight:400;letter-spacing:-.04em;line-height:1}
+.av .stats span{display:block;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+.av section{padding:clamp(40px,6vw,70px) 0 0}
+.av .section-lede{font-size:17px;line-height:1.65;color:#3b372f;max-width:800px;margin:14px 0 24px}
+.av .grid{display:grid;gap:14px}
+.av .four{grid-template-columns:repeat(4,1fr)}
+.av .three{grid-template-columns:repeat(3,1fr)}
+.av .two{grid-template-columns:repeat(2,1fr)}
+.av .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:7px}
+.av .card .num{font-size:10px;font-weight:800;letter-spacing:.16em;color:var(--orange)}
+.av .card p{font-size:14px;line-height:1.55;color:#4a453b;margin:0}
+.av .card a{font-size:13px;font-weight:700;margin-top:auto;padding-top:9px;color:var(--teal)}
+.av .card a:hover{color:var(--orange)}
+.av .param{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px}
+.av .param .head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:4px}
+.av .param h3{font-size:19px}
+.av .param .default{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);background:#e8f2ee;border-radius:999px;padding:3px 8px;white-space:nowrap}
+.av .param p{font-size:13px;line-height:1.55;color:#4a453b;margin:0}
+.av .param small{display:block;font-size:12px;color:var(--muted);margin-top:6px}
+.av .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+.av .step{border-top:2px solid var(--orange);padding-top:14px}
+.av .step b{display:block;font-family:Georgia,serif;font-size:21px;font-weight:400;margin-bottom:5px}
+.av .step p{font-size:14px;line-height:1.55;color:#4a453b;margin:0}
+.av .callout{background:#17140f;color:#f6f0e4;border-radius:22px;padding:24px 26px;margin-top:22px}
+.av .callout h3{color:#fff;font-size:23px}
+.av .callout p{color:#cfc6b8;font-size:14px;line-height:1.65;margin:8px 0 0}
+.av .callout code{color:#f0b49b;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px}
+.av .recipe{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px}
+.av .recipe .tag{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--orange)}
+.av .recipe h3{font-size:20px;margin:4px 0 6px}
+.av .recipe p{font-size:13.5px;line-height:1.55;color:#4a453b;margin:0}
+.av .recipe .cfg{display:inline-block;margin-top:10px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:11.5px;line-height:1.5;background:#f1eadb;border:1px solid var(--line);border-radius:10px;padding:7px 9px;color:#3b372f;word-break:break-word}
+.av .split3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+.av .fit{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px}
+.av .fit h3{font-size:19px;margin-bottom:8px}
+.av .fit ul{margin:0;padding-left:18px;color:#4a453b;font-size:13.5px;line-height:1.65}
+.av .fit li{margin:5px 0}
+.av details{border-top:1px solid var(--line);padding:15px 0}
+.av details:last-of-type{border-bottom:1px solid var(--line)}
+.av summary{cursor:pointer;font-weight:700;font-size:15.5px;list-style:none}
+.av summary::-webkit-details-marker{display:none}
+.av summary:after{content:"+";float:right;color:var(--orange);font-size:20px;line-height:1}
+.av details[open] summary:after{content:"–"}
+.av details p{font-size:14px;line-height:1.65;color:#4a453b;margin:10px 0 0;max-width:880px}
+.av .chiprow{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+.av .chiprow span{font-size:11.5px;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:6px 10px;color:#4a453b}
+.av .source{font-size:11.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px;margin-top:18px}
+.av .cta{background:#17140f;color:#f6f0e4;border-radius:26px;padding:clamp(30px,5vw,52px);margin-top:52px}
+.av .cta h2{color:#fff;max-width:760px}
+.av .cta p{color:#cfc6b8;font-size:16px;max-width:680px;margin:14px 0 22px}
+.av .cta .btn{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.av .cta .btn.ghost{background:transparent;color:var(--paper);border-color:#5b554a}
+.av footer{display:flex;flex-wrap:wrap;gap:12px 22px;justify-content:space-between;padding:24px 0 0;font-size:12px;color:var(--muted)}
+.av footer nav{display:flex;flex-wrap:wrap;gap:8px 16px}
+@media(max-width:900px){.av .hero{grid-template-columns:1fr}.av .four{grid-template-columns:repeat(2,1fr)}.av .three{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.av .four,.av .three,.av .two,.av .steps,.av .split3{grid-template-columns:1fr}.av .stats{grid-template-columns:repeat(2,1fr)}.av .stats div:nth-child(3n){border-right:1px solid var(--line)}.av .stats div:nth-child(2n){border-right:0}.av h1{font-size:40px}.av .flowrow{grid-template-columns:1fr}}
+</style>
+<style>
+.skip-link{position:absolute;left:-9999px;top:0;z-index:1000;background:#17140f;color:#f6f0e4;padding:10px 16px;border-radius:0 0 10px 0;font:600 14px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;text-decoration:none}
+.skip-link:focus{left:0}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="av">
+<div class="wrap">
+<header>
+<div class="top"><div class="brand"><span class="mark"><i></i></span>Elysia Tools · Audio Vocoder</div><a href="https://elysiatools.com/en/tools/audio-vocoder">Open the live tool ↗</a></div>
+</header>
+<main id="main">
+<div class="hero">
+<div>
+<p class="eyebrow">Media · Audio effect · Free online</p>
+<h1>Turn your voice into a <em>robot voice.</em></h1>
+<p class="lede">Audio Vocoder imposes the syllables and pitch of your voice onto a synthesized carrier. The result is the classic talking-instrument sound — robotic, musical, and instantly recognizable.</p>
+<div class="actions"><a class="btn" href="https://elysiatools.com/en/tools/audio-vocoder">Run Audio Vocoder →</a><a class="btn ghost" href="https://elysiatools.com/en/docs/audio-vocoder">View API docs</a></div>
+<p class="micro">No install · Up to 100 MB · MP3, WAV, FLAC and more</p>
+</div>
+<div class="flowcard">
+<div class="flowrow"><div class="sig"><span>Modulator</span><b>Your voice</b><small>Words, rhythm, pitch movement</small></div><div class="sig"><span>Carrier</span><b>Synth tone</b><small>Timbre, harmonics, character</small></div></div>
+<div class="arrow">↓</div>
+<div class="vocoder"><b>Channel vocoder</b><div class="bars"><i style="height:12px"></i><i style="height:23px"></i><i style="height:17px"></i><i style="height:31px"></i><i style="height:20px"></i><i style="height:27px"></i><i style="height:14px"></i><i style="height:24px"></i><i style="height:9px"></i><i style="height:19px"></i><i style="height:28px"></i></div></div>
+<div class="out"><span>Output</span><b>Your words, spoken by the instrument</b></div>
+</div>
+</div>
+<div class="stats"><div><b>Media</b><span>category</span></div><div><b>File</b><span>result type</span></div><div><b>100 MB</b><span>max upload</span></div><div><b>4</b><span>carrier types</span></div><div><b>7</b><span>output formats</span></div><div><b>API</b><span>ready</span></div></div>
+<section>
+<p class="eyebrow">What it does</p>
+<h2>Two signals. One voice.</h2>
+<p class="section-lede">A vocoder is not a pitch shifter, a filter, or a voice changer. It is a cross-synthesis effect: it reads the spectral envelope of one signal and applies it to the timbre of another. Your speech supplies the articulation; the carrier supplies the sound.</p>
+<div class="grid two">
+<article class="card"><h3 style="font-size:20px">The modulator</h3><p>Typically a voice or instrument recording. The vocoder tracks its energy across frequency bands — the syllable shapes, consonants, and pitch movement that make speech intelligible.</p></article>
+<article class="card"><h3 style="font-size:20px">The carrier</h3><p>A synthesized signal that provides the timbre. Synth, noise, pulse, and harmonic-rich carriers each give a different character, from clean electronic to gritty alien.</p></article>
+</div>
+<div class="callout"><h3>Not Auto-Tune. Not a voice changer.</h3><p>Auto-Tune corrects the pitch of one voice while keeping its timbre. A voice changer shifts or filters one stream. A vocoder always combines <b>two</b> streams: the syllables of the modulator and the tone of the carrier. That is why the output sounds like an instrument talking.</p></div>
+</section>
+<section>
+<p class="eyebrow">The controls</p>
+<h2>Every parameter, explained.</h2>
+<p class="section-lede">The live tool exposes eight controls. These are the defaults and the practical direction for each one.</p>
+<div class="grid two">
+<article class="param"><div class="head"><h3>Modulator Audio File</h3><span class="default">required</span></div><p>The voice or instrument to be vocoded. Common audio formats are accepted; the upload limit is 100 MB.</p><small>Tip: close-mic, dry, crisp consonants produce the clearest results.</small></article>
+<article class="param"><div class="head"><h3>Carrier Type</h3><span class="default">synth</span></div><p><b>Synth</b> is clean and electronic, <b>noise</b> is gritty, <b>pulse</b> is sharp and robotic, and <b>harmonic-rich</b> is fuller and organ-like.</p><small>Noise and percussion carriers are rhythmic but whispery; simple tonal carriers carry speech better.</small></article>
+<article class="param"><div class="head"><h3>Carrier Base Frequency</h3><span class="default">100 Hz</span></div><p>Range 20–1000 Hz. Lower values give a deeper voice; higher values sound brighter and thinner.</p><small>Try 80–150 Hz for a natural robot range; push higher for a character voice.</small></article>
+<article class="param"><div class="head"><h3>Carrier Waveform</h3><span class="default">sawtooth</span></div><p>Sine is pure, sawtooth is bright, square is harsh, and triangle is soft. The waveform shapes the harmonic character of the carrier.</p><small>Sawtooth and square are the classic choices for intelligible robot vocals.</small></article>
+<article class="param"><div class="head"><h3>Frequency Bands</h3><span class="default">16</span></div><p>Range 4–32. More bands give clearer articulation; fewer bands give a smoother, more synthetic texture.</p><small>If words are getting lost, raise the band count before changing anything else.</small></article>
+<article class="param"><div class="head"><h3>Analysis Window</h3><span class="default">50 ms</span></div><p>Range 10–200 ms. Shorter windows are more responsive; longer windows smooth transitions.</p><small>The tool derives its envelope-follower frequency from this value: 1000 ÷ window in ms.</small></article>
+<article class="param"><div class="head"><h3>Wet/Dry Mix</h3><span class="default">0.8</span></div><p>Range 0–1. At 0 you hear the original; at 1 you hear only the vocoded signal.</p><small>Use 0.8–1.0 for a full effect; blend lower if you want the original voice to remain present.</small></article>
+<article class="param"><div class="head"><h3>Output Format</h3><span class="default">MP3</span></div><p>MP3, AAC, M4A, OGG, Opus, FLAC, or WAV. Choose lossless FLAC/WAV for further editing; MP3 for quick sharing.</p><small>The result is a rendered file, not a live audio stream.</small></article>
+</div>
+</section>
+<section>
+<p class="eyebrow">How it works</p>
+<h2>From a dry take to a talking machine.</h2>
+<div class="steps">
+<div class="step"><b>1 · Prepare the modulator</b><p>Record or choose a dry voice clip. Keep it close to the mic, remove long silences, and keep the consonants crisp. The vocoder can only work with the articulation you give it.</p></div>
+<div class="step"><b>2 · Choose the carrier</b><p>Pick a carrier type, frequency, and waveform. A sustained sawtooth pad is the classic; noise and pulse give a harder, more mechanical edge.</p></div>
+<div class="step"><b>3 · Tune and render</b><p>Set the band count, analysis window, wet/dry mix, and output format. Run the tool, audition the result, and adjust one parameter at a time.</p></div>
+</div>
+<p class="section-lede" style="margin-top:22px">Under the hood, the implementation is a channel vocoder: the modulator and carrier are split into logarithmically spaced bands from 100 Hz to 5 kHz, each modulator band’s envelope is extracted, the matching carrier band is multiplied by that envelope, and the bands are summed and mixed with the dry signal.</p>
+</section>
+<section>
+<p class="eyebrow">Use cases</p>
+<h2>Where a vocoder earns its place.</h2>
+<div class="grid three">
+<article class="card"><span class="num">01</span><h3>Robot vocal hooks</h3><p>Record a dry phrase, load it as the modulator, and speak it through a sustained synth chord. The result follows your melody and rhythm while sounding unmistakably mechanical.</p></article>
+<article class="card"><span class="num">02</span><h3>Game and film voices</h3><p>Give an alien, android, or AI character a repeatable voice by saving one carrier setup and batch-rendering every line through it.</p></article>
+<article class="card"><span class="num">03</span><h3>Anonymous narration</h3><p>Keep the rhythm and intelligibility of an interview while removing the identity of the speaker — without the obvious artifacts of pitch shifting.</p></article>
+<article class="card"><span class="num">04</span><h3>Electronic music</h3><p>Add robotic backing vocals, vocoded ad-libs, or a talking-instrument hook to an EDM, electro, or synth-pop arrangement.</p></article>
+<article class="card"><span class="num">05</span><h3>Art and installations</h3><p>Turn spoken word into a synthetic, haunting voice for an installation, a performance, or a soundscape.</p></article>
+<article class="card"><span class="num">06</span><h3>Sound design experiments</h3><p>Compare carriers, waveforms, band counts, and analysis windows to find a texture before committing to a render.</p></article>
+</div>
+</section>
+<section>
+<p class="eyebrow">Recipes</p>
+<h2>Start from a known-good setting.</h2>
+<div class="grid two">
+<article class="recipe"><span class="tag">Music producer</span><h3>Robotic vocals for an EDM track</h3><p>Upload the vocal as the modulator, choose a synthesized sawtooth carrier, and open the articulation up.</p><span class="cfg">carrierType: synth · carrierFreq: 150 · carrierWaveform: sawtooth · bands: 24 · mix: 0.9</span></article>
+<article class="recipe"><span class="tag">Sound designer</span><h3>Alien voice for a game character</h3><p>Use a noise carrier with a long analysis window for smoother, stranger transitions — and commit fully to the effect.</p><span class="cfg">carrierType: noise · analysis: 100 · mix: 1.0</span></article>
+<article class="recipe"><span class="tag">Artist</span><h3>Synthesized speech for an installation</h3><p>Choose a harmonic-rich carrier and reduce the band count for a smoother, less articulate, more haunted texture.</p><span class="cfg">carrierType: harmonic · bands: 8 · mix: 0.7</span></article>
+<article class="recipe"><span class="tag">Content creator</span><h3>Anonymous narration for a documentary</h3><p>Keep intelligibility high, use a neutral synthetic carrier, and use a subtle wet/dry blend so the words remain clear.</p><span class="cfg">high bands · neutral carrier · moderate mix · check every line in context</span></article>
+<article class="recipe"><span class="tag">Indie game developer</span><h3>A consistent NPC voice</h3><p>Design one carrier per character, save the settings, and render every line through the same setup.</p><span class="cfg">distinct carrier per character · same bands · same mix · batch render</span></article>
+<article class="recipe"><span class="tag">Electronic producer</span><h3>Robot hook over a music bed</h3><p>Speak or sing a dry phrase, feed a sustained chord as the carrier, and tune the carrier to the key of the track.</p><span class="cfg">moderate bands · medium dry/wet · carrier tuned to the track key</span></article>
+</div>
+</section>
+<section>
+<p class="eyebrow">Fit and limits</p>
+<h2>What it is — and what it is not.</h2>
+<div class="split3">
+<div class="fit"><h3>Best for</h3><ul><li>Robot-voice hooks and vocoded vocals for electronic music.</li><li>Stylizing a voice for sci-fi shorts, games, or anonymous narration.</li><li>Comparing carriers, waveforms, and band counts before a final render.</li></ul></div>
+<div class="fit"><h3>Not for</h3><ul><li>Cleaning up a noisy recording — a vocoder adds character; it does not remove noise.</li><li>Live microphone processing — this tool renders an uploaded file.</li><li>Uploading a custom carrier — the carrier is synthesized only.</li></ul></div>
+<div class="fit"><h3>Watch out</h3><ul><li>Files over 100 MB: trim or split the recording first.</li><li>Muffled output: raise the band count toward 32 and try a sawtooth or square carrier.</li><li>Weak consonants: re-record close to the mic and enunciate clearly.</li></ul></div>
+</div>
+</section>
+<section>
+<p class="eyebrow">FAQ</p>
+<h2>Questions, answered.</h2>
+<details><summary>What is a vocoder effect?</summary><p>A vocoder effect analyzes the spectral envelope of a modulator signal and applies it to a carrier signal, creating robotic or electronic voice sounds.</p></details>
+<details><summary>What audio formats are supported?</summary><p>Input supports common audio formats such as MP3 and WAV. Output can be MP3, AAC, M4A, OGG, Opus, FLAC, or WAV.</p></details>
+<details><summary>Can I use my own carrier signal?</summary><p>No. The tool uses synthesized carriers — synth, noise, pulse, or harmonic-rich. You cannot upload a custom carrier file; use your recording as the modulator instead.</p></details>
+<details><summary>How do I make the vocoded voice clearer?</summary><p>Increase the number of frequency bands for clearer articulation, decrease it for a smoother effect, and adjust the analysis window for responsiveness. Crisp consonants in the source matter more than any single setting.</p></details>
+<details><summary>Is there a file size limit?</summary><p>Yes. The modulator audio file must be under 100 MB. Trim or split longer recordings first.</p></details>
+<details><summary>How do I vocode my voice onto a song or instrumental?</summary><p>Split the material in two: the song or chord progression becomes the carrier, and your voice becomes the modulator. Load both and render. For the classic effect, use a sustained synth pad as the carrier and speak with exaggerated consonants — consonants are what keep vocoded words intelligible.</p></details>
+<details><summary>Why does my output sound muffled?</summary><p>Intelligibility lives mostly in consonants such as s, t, and k. If the modulator is mumbled, far from the microphone, or drenched in reverb, the vocoder has little to work with. Re-record close to the mic, raise the band count, and avoid busy carriers: a simple sustained tone carries speech better than a full mix.</p></details>
+<details><summary>What makes a good carrier?</summary><p>Steady, harmonically rich, tonal sources work best: sawtooth or square synth pads, organ chords, and string ensembles excite all frequency bands evenly. Noise and percussion carriers give rhythmic but whispery results; full songs sound muddy because the vocoder bands fight with the music’s own chords.</p></details>
+<details><summary>Can I control the effect live with gestures?</summary><p>This tool renders uploaded audio rather than processing live input, so gesture control happens by recording it: speak or hum while moving, and use a dynamic source so the sweeps get captured. For true real-time hand control you need a hardware vocoder pedal or a live plugin.</p></details>
+<details><summary>Is a vocoder the same as Auto-Tune?</summary><p>No. Auto-Tune corrects the pitch of a voice but keeps its timbre. A voice changer shifts or filters a single audio stream. A vocoder combines two streams: it reads the syllables of one and speaks them through the timbre of another.</p></details>
+</section>
+<section>
+<p class="eyebrow">Continue</p>
+<h2>Related tools and examples.</h2>
+<div class="grid three">
+<article class="card"><span class="num">Alternative</span><h3>Audio Distortion</h3><p>Add distortion or overdrive for a harsher, more aggressive character.</p><a href="https://elysiatools.com/en/tools/audio-distortion">Open Audio Distortion →</a></article>
+<article class="card"><span class="num">Alternative</span><h3>Audio Telephone Effect</h3><p>Simulate the narrow, band-limited sound of a telephone call.</p><a href="https://elysiatools.com/en/tools/audio-telephone-effect">Open Telephone Effect →</a></article>
+<article class="card"><span class="num">Alternative</span><h3>Audio Radio Effect</h3><p>Simulate the character of an old AM radio broadcast.</p><a href="https://elysiatools.com/en/tools/audio-radio-effect">Open Radio Effect →</a></article>
+<article class="card"><span class="num">Workflow</span><h3>Audio Sound Design Hub</h3><p>Reverb, delay, modulation, and character effects — choose, preview, compare, and verify a treatment in context.</p><a href="https://elysiatools.com/en/hubs/audio-sound-design-effects">Open the hub →</a></article>
+<article class="card"><span class="num">Samples</span><h3>Audio Sample Library</h3><p>Copyright-free MP3, WAV, FLAC, and speech samples for testing and development.</p><a href="https://elysiatools.com/en/samples/mp3-samples">Browse audio samples →</a></article>
+<article class="card"><span class="num">Related</span><h3>More audio tools</h3><p>Stereo to mono, SNR estimation, multitrack MIDI, and other audio utilities.</p><a href="https://elysiatools.com/en/tools?category=Images%2C%20Audio%20%26%20Video">Browse the category →</a></article>
+</div>
+<p class="chiprow"><span>Audio</span><span>Voice</span><span>Robot voice</span><span>Vocoder</span><span>Electronic music</span><span>Sci-fi</span><span>Sound design</span><span>API ready</span></p>
+</section>
+<section>
+<p class="eyebrow">For developers</p>
+<h2>Use it from an API.</h2>
+<p class="section-lede">Audio Vocoder is API-ready. The tool page has a documented HTTP endpoint, cURL, JavaScript, and Python examples, and an AI-readable Markdown mirror. File parameters use the presigned-upload flow: request an upload URL, PUT the file, then pass the storage key.</p>
+<div class="callout"><h3>Endpoint</h3><p><code>POST https://api.elysiatools.com/en/api/tools/audio-vocoder</code><br><code>GET https://elysiatools.com/ai/en/tools/audio-vocoder.md</code></p><p style="margin-top:10px">Full request examples and the upload flow live on the <a href="https://elysiatools.com/en/docs/audio-vocoder" style="color:#f0b49b">Audio Vocoder docs page</a>.</p></div>
+<p class="source">Tool details from the Elysia Tools catalog, last updated 2025-12-13. Free plan limits apply; the tool renders uploaded files and is not a real-time microphone processor.</p>
+</section>
+<div class="cta"><h2>Make your voice sound like a machine.</h2><p>Upload a dry take, choose a carrier, and render the classic talking-instrument sound — free, in the browser, with no install.</p><div class="actions" style="margin-bottom:0"><a class="btn" href="https://elysiatools.com/en/tools/audio-vocoder">Open Audio Vocoder →</a><a class="btn ghost" href="https://elysiatools.com/en/docs/audio-vocoder">Read the docs</a></div></div>
+</main>
+<footer><span>Audio Vocoder · Elysia Tools. This page introduces the tool and its settings; the live tool may evolve. © 2026 Elysia Tools.</span><nav><a href="https://elysiatools.com/en/tools/audio-vocoder">Tool</a><a href="https://elysiatools.com/en/docs/audio-vocoder">Docs</a><a href="https://elysiatools.com/en/hubs/audio-sound-design-effects">Audio hub</a><a href="https://elysiatools.com/en/samples/mp3-samples">Samples</a><a href="https://elysiatools.com/en">Elysia Tools</a></nav></footer>
+</div>
+</div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://elysiatools.com/#organization",
+      "name": "Elysia Tools",
+      "url": "https://elysiatools.com/en",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://elysiatools.com/og-image.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "description": "A free online toolbox for files, data, text, images, audio, video, PDFs, developer formats and AI tasks."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://elysiatools.com/#website",
+      "url": "https://elysiatools.com/en",
+      "name": "Elysia Tools",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://elysiatools.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://elysiatools.com/en/tools/audio-vocoder#webpage",
+      "url": "https://elysiatools.com/en/tools/audio-vocoder",
+      "name": "Audio Vocoder — Free Online Robot Voice Effect | Elysia Tools",
+      "description": "Turn your voice into a robot voice with a free online channel vocoder. Upload a dry take, choose a synth carrier and render MP3, WAV, FLAC and more.",
+      "isPartOf": {
+        "@id": "https://elysiatools.com/#website"
+      },
+      "about": {
+        "@id": "https://elysiatools.com/en/tools/audio-vocoder#software"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-11-09",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://elysiatools.com/og-image.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "breadcrumb": {
+        "@id": "https://elysiatools.com/en/tools/audio-vocoder#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://elysiatools.com/en/tools/audio-vocoder#software"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://elysiatools.com/en/tools/audio-vocoder#software",
+      "name": "Audio Vocoder",
+      "url": "https://elysiatools.com/en/tools/audio-vocoder",
+      "description": "A free online channel vocoder that imposes the syllables and pitch of a voice onto a synthesized carrier, producing the classic talking-instrument robot voice.",
+      "applicationCategory": "MultimediaApplication",
+      "applicationSubCategory": "Audio effect",
+      "operatingSystem": "Any (web browser)",
+      "browserRequirements": "Requires JavaScript; no installation.",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "image": "https://elysiatools.com/og-image.jpg",
+      "featureList": [
+        "4 carrier types: synth, noise, pulse, harmonic-rich",
+        "4 carrier waveforms: sine, sawtooth, square, triangle",
+        "Carrier base frequency 20–1000 Hz",
+        "4–32 frequency bands",
+        "10–200 ms analysis window",
+        "Wet/dry mix from 0 to 1",
+        "Output formats: MP3, AAC, M4A, OGG, Opus, FLAC, WAV",
+        "Upload limit: 100 MB",
+        "REST API with cURL, JavaScript and Python examples"
+      ],
+      "publisher": {
+        "@id": "https://elysiatools.com/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://elysiatools.com/en/tools/audio-vocoder#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Elysia Tools",
+          "item": "https://elysiatools.com/en"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tools",
+          "item": "https://elysiatools.com/en/tools"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Audio Vocoder",
+          "item": "https://elysiatools.com/en/tools/audio-vocoder"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://elysiatools.com/en/tools/audio-vocoder#faq",
+      "url": "https://elysiatools.com/en/tools/audio-vocoder",
+      "name": "Audio Vocoder — frequently asked questions",
+      "isPartOf": {
+        "@id": "https://elysiatools.com/en/tools/audio-vocoder#webpage"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a vocoder effect?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A vocoder effect analyzes the spectral envelope of a modulator signal and applies it to a carrier signal, creating robotic or electronic voice sounds."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What audio formats are supported?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Input supports common audio formats such as MP3 and WAV. Output can be MP3, AAC, M4A, OGG, Opus, FLAC, or WAV."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use my own carrier signal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The tool uses synthesized carriers — synth, noise, pulse, or harmonic-rich. You cannot upload a custom carrier file; use your recording as the modulator instead."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I make the vocoded voice clearer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Increase the number of frequency bands for clearer articulation, decrease it for a smoother effect, and adjust the analysis window for responsiveness. Crisp consonants in the source matter more than any single setting."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a file size limit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The modulator audio file must be under 100 MB. Trim or split longer recordings first."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I vocode my voice onto a song or instrumental?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Split the material in two: the song or chord progression becomes the carrier, and your voice becomes the modulator. Load both and render. For the classic effect, use a sustained synth pad as the carrier and speak with exaggerated consonants — consonants are what keep vocoded words intelligible."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does my output sound muffled?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Intelligibility lives mostly in consonants such as s, t, and k. If the modulator is mumbled, far from the microphone, or drenched in reverb, the vocoder has little to work with. Re-record close to the mic, raise the band count, and avoid busy carriers: a simple sustained tone carries speech better than a full mix."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What makes a good carrier?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Steady, harmonically rich, tonal sources work best: sawtooth or square synth pads, organ chords, and string ensembles excite all frequency bands evenly. Noise and percussion carriers give rhythmic but whispery results; full songs sound muddy because the vocoder bands fight with the music’s own chords."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I control the effect live with gestures?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This tool renders uploaded audio rather than processing live input, so gesture control happens by recording it: speak or hum while moving, and use a dynamic source so the sweeps get captured. For true real-time hand control you need a hardware vocoder pedal or a live plugin."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a vocoder the same as Auto-Tune?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Auto-Tune corrects the pitch of a voice but keeps its timbre. A voice changer shifts or filters a single audio stream. A vocoder combines two streams: it reads the syllables of one and speaks them through the timbre of another."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</body>
+</html>
